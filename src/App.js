@@ -1,13 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import firebase from 'Firebase';
+import 'firebase/firestore';
+import Map from './Map';
+import BusMarker from './BusMarker';
 
-function App() {
+const App = ({ apiKey }) => {
+    const [buses, setBuses] = useState([]);
+
+    useEffect(() => {
+        const db = firebase.firestore();
+        db.collection('buses').onSnapshot((snapshot) => {
+            const buses = snapshot.docs.map((doc) => doc.data());
+            setBuses(buses);
+        });
+    }, []);
+
     return ( <
-        div className = "App" >
-
-        <
-        /div>
+        Map apiKey = { apiKey } > {
+            buses.map((bus) => ( <
+                BusMarker key = { bus.id }
+                lat = { bus.lat }
+                lng = { bus.lng }
+                />
+            ))
+        } <
+        /Map>
     );
-}
+};
 
 export default App;
