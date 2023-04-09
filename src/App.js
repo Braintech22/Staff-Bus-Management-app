@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import firebase from 'Firebase';
+import firebase from 'firebase';
 import 'firebase/firestore';
 import Map from './Map';
 import BusMarker from './BusMarker';
