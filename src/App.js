@@ -1,31 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import firebase from 'firebase';
-import 'firebase/firestore';
-import Map from './Map';
-import BusMarker from './BusMarker';
+import "./App.scss";
 
-const App = ({ apiKey }) => {
-    const [buses, setBuses] = useState([]);
-
-    useEffect(() => {
-        const db = firebase.firestore();
-        db.collection('buses').onSnapshot((snapshot) => {
-            const buses = snapshot.docs.map((doc) => doc.data());
-            setBuses(buses);
-        });
-    }, []);
-
+function App() {
     return ( <
-        Map apiKey = { apiKey } > {
-            buses.map((bus) => ( <
-                BusMarker key = { bus.id }
-                lat = { bus.lat }
-                lng = { bus.lng }
-                />
-            ))
-        } <
-        /Map>
+        div >
+        <
+        h1 > LET START BUSTRAK PROJECT HERE!!! < /h1> <
+        /div>
     );
-};
+}
 
 export default App;
