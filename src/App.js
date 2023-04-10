@@ -1,11 +1,42 @@
-import "./App.scss";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+
+import BusRoute from './components/BusRoute';
 
 function App() {
     return ( <
+        Router >
+        <
         div >
         <
-        h1 > LET START BUSTRAK PROJECT HERE!!! < /h1> <
-        /div>
+        Header / >
+        <
+        Routes >
+        <
+        Route path = "/"
+        element = { < Home / > }
+        /> <
+        Route path = "/about"
+        element = { < About / > }
+        /> <
+        Route path = "/contact"
+        element = { < Contact / > }
+        /> <
+        Route path = "/bus-route"
+        element = { < BusRoute / > }
+        /> <
+        /Routes> <
+        Footer / >
+        <
+        /div> <
+        /Router>
     );
 }
 
