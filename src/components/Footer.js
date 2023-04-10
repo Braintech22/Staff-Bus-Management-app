@@ -4,8 +4,8 @@ function Footer() {
     return ( <
         footer >
         <
-        p > & copy; 2023 Staff Bus Management App < /p> <
-        p > View the source code on < a href = "https://github.com/yourusername/staff-bus-management-app" > GitHub < /a></p >
+        p > & copy; 2023 Bustrak < /p> <
+        p > View the source code on < a href = "https://github.com/Braintech22/Staff-Bus-Management-app" > GitHub < /a></p >
         <
         /footer>
     );

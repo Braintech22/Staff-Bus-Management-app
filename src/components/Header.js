@@ -1,15 +1,20 @@
 import React from 'react';
+import logo from "../asset/bustrak logo.png";
+import styles from './Header.module.scss';
+
+
 
 function Header() {
     return ( <
         header >
         <
-        div className = "logo" >
+        div className = { styles.header } >
         <
-        img src = "logo.png"
+        img className = '{styles.logo}'
+        src = { logo }
         alt = "Logo" / >
         <
-        h1 > Staff Bus Management App < /h1> <
+        h1 > Bustrak < /h1> <
         /div> <
         nav >
         <

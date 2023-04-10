@@ -1,11 +1,14 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+
+import "./Home.module.scss";
+
+
 
 function Home() {
     return ( <
         div >
         <
-        h1 > Welcome to the Staff Bus Management App < /h1> <
+        h1 > Welcome to Bustrak App < /h1> <
         p > Our app helps manage bus schedules and routes
         for staff transportation. < /p> <
         ul >
@@ -20,4 +23,4 @@ function Home() {
     );
 }
 
-export default Route({ path: '/', exact: true })(Home);
+export default Home;
