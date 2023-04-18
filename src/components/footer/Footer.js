@@ -5,18 +5,12 @@ import { Container } from 'react-bootstrap';
 
 
 function Footer() {
-    return ( <
-        footer className = "mt-5 bg-dark text-light"
+    return ( <footer className = "mt-5 bg-dark text-light"
         style = {
             { height: '65px' } } >
-        <
-        Container >
-        <
-        p className = "text-center" > Bustrak 2023 My Website < /p> <
-        p className = "text-center" > & copy; { new Date().getFullYear() }
-        Company Name < /p> <
-        /Container> <
-        /footer>
+        <Container >
+        <p className = "text-center" > Bustrak 2023 My Website </p> <p className = "text-center" > & copy; { new Date().getFullYear() }
+        Company Name </p> </Container> </footer>
     );
 }
 

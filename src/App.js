@@ -4,39 +4,20 @@ import Home from './Pages/home/Home';
 import Footer from './components/footer/Footer';
 import NavBar from './components/navber/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Index from './Pages/index/Index';
 
 
 
 function App() {
-    return ( <
-        >
-        <
-        BrowserRouter >
-        <
-        NavBar / >
-        <
-        Home / >
-
-        <
-        Routes >
-        <
-        Route path = './'
-        element = { < Home / > }
-        /> <
-        /Routes>
-
-
-
-
-        <
-        Footer / >
-
-        <
-        /BrowserRouter>
-
-        <
-        />
-
+    return (
+        <BrowserRouter>
+        <NavBar />
+        <Routes>
+        <Route path = '/' element = { <Home /> }/>
+        <Route path = '/map' element = { <Index /> }/>
+        </Routes>
+        <Footer />
+        </BrowserRouter>
     );
 }
 
