@@ -48,40 +48,24 @@ import logo from '../logo.png';
 
 
 function NavBar() {
-    return ( <
-        >
-        <
-        Navbar bg = "dark"
+    return (
+        <Navbar bg = "dark"
         lg sm variant = "dark"
         style = {
             { height: '75px' } } >
-        <
-        Container >
-        <
-        Navbar.Brand href = "#home" >
-        <
-        img alt = ""
+        <Container >
+        <Navbar.Brand href = "#home" >
+        <img alt = ""
         src = { logo }
         width = "130"
         height = "80"
-        className = "d-inline-block align-top p-2" /
-        > { ' ' }
+        className = "d-inline-block align-top p-2" />
 
-        <
-        /Navbar.Brand> <
-        Nav className = "justify-content-end" >
-        <
-        Nav.Link href = "#home" > Home < /Nav.Link> <
-        Nav.Link href = "#bus-track" > Bus Tracker < /Nav.Link> <
-        Nav.Link href = "#admin" > Admin < /Nav.Link> <
-        /Nav> <
-        /Container> <
-        /Navbar>
-
-
-
-        <
-        />
+        </Navbar.Brand> <Nav className = "justify-content-end" >
+        <Nav.Link href = "#home" > Home </Nav.Link> <Nav.Link href = "#bus-track" > Bus Tracker </Nav.Link> 
+        <Nav.Link href = "#admin" > Admin </Nav.Link> </Nav> 
+        </Container> 
+        </Navbar>
     );
 }
 
