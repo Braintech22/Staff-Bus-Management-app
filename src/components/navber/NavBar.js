@@ -44,28 +44,42 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../logo.png';
+import { Link } from 'react-router-dom';
 
 
 
 function NavBar() {
-    return (
-        <Navbar bg = "dark"
+    return ( <
+        Navbar className = "fixed-top bg-light"
+        bg = "dark"
         lg sm variant = "dark"
         style = {
-            { height: '75px' } } >
-        <Container >
-        <Navbar.Brand href = "#home" >
-        <img alt = ""
+            { height: '75px' }
+        } >
+        <
+        Container >
+        <
+        Navbar.Brand href = "#home" >
+        <
+        img alt = ""
         src = { logo }
         width = "130"
         height = "80"
-        className = "d-inline-block align-top p-2" />
+        className = "d-inline-block align-top p-2" / >
 
-        </Navbar.Brand> <Nav className = "justify-content-end" >
-        <Nav.Link href = "#home" > Home </Nav.Link> <Nav.Link href = "#bus-track" > Bus Tracker </Nav.Link> 
-        <Nav.Link href = "#admin" > Admin </Nav.Link> </Nav> 
-        </Container> 
-        </Navbar>
+        <
+        /Navbar.Brand> <Nav className = "justify-content-end" > <
+        Nav.Link as = { Link }
+        to = "/" > Home < /Nav.Link> <
+        Nav.Link as = { Link }
+        to = "/map" > Bus Tracker < /Nav.Link>
+
+        <
+        Nav.Link as = { Link }
+        to = "/admin" > Admin < /Nav.Link> <
+        /Nav> <
+        /Container>  <
+        /Navbar>
     );
 }
 
