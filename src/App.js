@@ -9,15 +9,23 @@ import Index from './Pages/index/Index';
 
 
 function App() {
-    return (
-        <BrowserRouter>
-        <NavBar />
-        <Routes>
-        <Route path = '/' element = { <Home /> }/>
-        <Route path = '/map' element = { <Index /> }/>
-        </Routes>
-        <Footer />
-        </BrowserRouter>
+    return ( <
+        BrowserRouter >
+        <
+        NavBar / >
+        <
+        Routes >
+        <
+        Route path = '/'
+        element = { < Home / > }
+        /> <
+        Route path = '/map'
+        element = { < Index / > }
+        /> <
+        /Routes> <
+        Footer / >
+        <
+        /BrowserRouter>
     );
 }
 
